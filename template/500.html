@@ -1,0 +1,11 @@
+{% extends 'AmirWeb/layout.html' %}
+{% block title %}
+    صفحه 500
+{% endblock %}
+{% block context %}
+ <div class="text-center" style="margin-top: 100px ">
+    <h1>اینترنت خود را بررسی کنید !</h1>
+     <h2>خطا : 500</h2>
+    <button type="button" class="btn btn-dark btn-lg"><a href="{% url 'home_page' %}">بازگشت به صفحه اصلی</a></button>
+ </div>
+{% endblock %}

@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'Samim';
+    src: url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim.eot');
+    src: url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim.eot?#iefix') format('embedded-opentype'), url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim.woff') format('woff'), url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Samim-bold';
+    src: url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim-Bold.eot');
+    src: url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim-Bold.eot?#iefix') format('embedded-opentype'), url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim-Bold.woff') format('woff'), url('https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/Samim-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+body {
+  font-family: 'Samim', sans-serif;
+  direction: rtl;
+}
+
+/*Main attributes*/
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+  }
+}
+h1 , h2 , h3 , h4 , h5 , h6 {
+  font-family: 'Samim', sans-serif;
+}
+
+h1.with-sideline, h2.with-sideline, h3.with-sideline, h4.with-sideline, h5.with-sideline, h6.with-sideline {
+  padding-right: 70px;
+}
+h1.with-sideline:before, h2.with-sideline:before, h3.with-sideline:before, h4.with-sideline:before, h5.with-sideline:before, h6.with-sideline:before {
+  right: 0;
+  top:60%;
+}
+
+.intro-box .content-side .title,
+.intro-box .content-side .subtitle,
+.btn,
+ul#primary-menu li a,
+.heading-with-sub .subtitle,
+.heading-with-sub .lead,.page-head h2.description,
+.posts-list .post a,
+.heading-with-sub h3.title,
+.sans-font ,
+.alert,
+blockquote.quote,
+.vc-card .vc-card-wrapper .title ,
+.icon-box.ib-edu .description ,
+.book-el .contents .item-meta .date,
+.course-el .contents .item-meta .date ,
+.ol-timeline .tl-section.with-thumb >.item-section ,
+.call-out .sub-title ,
+.heading-with-sub h4.subtitle,
+.ol-timeline-tab .tl-content .title,
+.ol-timeline-tab .tl-head li{
+  font-family: 'Samim', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+      float: right;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-offset-3 {
+    margin-right:25%;
+    margin-left:0;
+  }
+}
+
+
+/*Menu*/
+#header.mobile-menu #primary-menu >* {
+  text-align: right;
+}
+.mobile-menu .head-main {
+  text-align: left !important;
+}
+#header.is-sticky .head-main {
+    text-align: left;
+}
+ul#primary-menu >li > a{
+  padding: 0px 18px 0px 2px;
+}
+
+
+
+
+/*Header*/
+.intro-box >* {
+    float: right;
+}
+.intro-box .content-side {
+  right: 50%;
+  left: 0;
+}
+
+
+/*Educations*/
+.icon-box.ib-edu > i {
+  float: right;
+}
+.icon-box.ib-edu .ib-wrap {
+  margin-right: 90px;
+  padding-left: 20px;
+  margin-left: 0;
+  padding-right: 0;
+  text-align: right;
+}
+.featured-item.boxed .features-title {
+  text-align: right;
+}
+
+
+
+/*Reseaechs*/
+.owl-carousel .owl-stage-outer {
+  direction: ltr;
+}
+.owwwlab-theme.nav-top-right .owl-nav {
+  text-align: left;
+}
+.owwwlab-theme .owl-nav .owl-prev:after {
+  content: "\e9cb";
+  padding-left: 2px;
+  padding-right: 0;
+}
+.owwwlab-theme .owl-nav .owl-next:after {
+  content: "\e9c6";
+  padding-left: 2px;
+  padding-right: 0;
+}
+
+
+/*Honors*/
+.ol-timeline-tab {
+  margin-right: -10px;
+  margin-left: 0;
+}
+.ol-timeline-tab:after {
+  right: 10px;
+  left: initial;
+}
+.ol-timeline-tab .tl-content {
+  margin-left:0;
+  margin-right: 160px;
+}
+.ol-timeline-tab .tl-head {
+  right: 0;
+  left: auto;
+  padding: 0 10px 0 0;
+}
+.ol-timeline-tab .tl-head li {
+  padding: 5px 12px 5px 5px
+}
+.ol-timeline-tab .tl-head li:after {
+  right: -5px;
+  left: auto;
+}
+
+
+/*footer*/
+.widget > h4::after {
+    right: 0;
+}
+.posts-list .post a.entry-image {
+    float: right;
+}
+
+.posts-list .post .entry-content {
+    margin-right: 65px;
+}
+
+/*ّInternal Pages*/
+/*Header*/
+#header .logo-wrapper {
+  float: right;
+}
+#header .text-logo .text-wrapper {
+  margin-right: 10px;
+  margin-left: 0;
+  text-align: right;
+}
+@media (min-width: 1200px){
+  body:not(.side-header) .nav-light ul#primary-menu {
+    float: left;
+  }
+}
+
+/*contact*/
+.ol-accordion .item-head .ol-toggle-icon {
+   left: 20px;
+    right: initial;
+    width: 15px;
+}
+
+/*research*/
+.icon-box.ib-v3 > i, .icon-box.ib-v4 > i, .icon-box.ib-v1 > i {
+    float: right;
+}
+
+.icon-box.ib-v3 .title, .icon-box.ib-v4 .title, .icon-box.ib-v1 .title {
+    margin-left: 0;
+    margin-right: 65px;
+}
+.pub-item .elem-wrapper {
+    float: right;
+}
+.pub-item.with-icon .content-wrapper {
+    margin-left: 0;
+    margin-right: 70px;
+}
+.btn-icon-left i {
+    right: auto;
+    left: -10px;
+    float: left;
+}
+
+
+/*single-post*/
+.author-bio .avatar,ul.comments .avatar {
+    float: right;
+}
+
+ul.comments .comment-body {
+    margin-right: 60px;
+    margin-left: 0px;
+}
+
+.author-bio .author-bio-content {
+    margin-right: 100px;
+    margin-left: 0px;
+}
+
+.caption-img.off-container .caption {
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.alert {
+    text-align: right;
+}
+
+.large-typo .ol-dropcaps {
+    margin-left: 15px;
+    margin-right: 0;
+}
+.large-typo .ol-dropcaps {
+    float: right;
+}
+ul.comments .comment-body .comment-meta ul li.author-name span {
+  padding-right: 5px;
+}
+
+
+/*teaching*/
+.ol-dropcaps {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.icon-box.ib-v4 p {
+	margin-left:0px;
+    margin-right: 65px;
+
+}
+
+
+/*publocation*/
+.ol-timeline {
+    border-left: initial;
+    border-right: 1px solid #e8e8e8;
+    margin-left: initial;
+    margin-right: 0;
+}
+
+.ol-timeline .tl-item.pub-item.with-thumb .content-wrapper {
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.ol-timeline .tl-item {
+    position: relative;
+    margin-right: 40px;
+}
+
+.ol-timeline .tl-item::before {
+    left: initial;
+    right: -40px;
+}
+.ol-timeline .item-section::after {
+    left: -27px;
+    right: initial;
+}
+
+
+.ol-timeline .item-section:after {
+    left: -27px;
+    right: initial;
+}
+.ol-timeline .item-section {
+    margin-right: -130px;
+    margin-right: initial;
+}
+.ol-timeline:before {
+    left: 0;
+    margin-right: -8px;
+    left: initial;
+    margin-left: initial;
+}
+.ol-timeline .tl-section>.item-section {
+    margin-right: -90px;
+    margin-left: initial;
+    text-align: left;
+    left: initial;
+}
+.ol-timeline .tl-item {
+    margin-right: 40px;
+    margin-left: initial;
+}
+.ol-timeline .tl-item:before {
+    right: -40px;
+    left: initial;
+}
+.ol-timeline .item-section.is_stuck {
+    right: auto;
+    left: initial;
+}
+/*Articles*/
+.journal-el .sub-title {
+  letter-spacing: 0;
+  line-height: 15px;
+}
+.page-head h4.head {
+  letter-spacing: 1px;
+}
+.single-post .center-meta ul.meta li {
+  margin-bottom:6px;
+}

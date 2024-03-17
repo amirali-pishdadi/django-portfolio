@@ -1,0 +1,184 @@
+{% extends 'AmirWeb/layout.html' %}
+{% block title %}
+{{ user.get_full_name }}
+{% endblock %}
+{% block context %}
+    <!-- #####Begin contents-->
+    <section id="contents">
+        <div class="page-head set-bg hvh-100"><img src="/static/images/bg/01.jpg" class="set-me">
+            <div class="container">
+                <div class="tb-vcenter-wrapper">
+                    <div class="vcenter">
+                        <div class="intor-box-wrapper">
+                            <div class="intro-box">
+                                <div class="img-side shadow"><img alt="" src="{{ is_main_setting.site_logo.url }}"
+                                                                  class="full-width"
+                                                                  style="border-radius: 10px ; opacity: 0.80"></div>
+                                <div class="content-side shadow">
+                                    <div class="inner-wrapper">
+                                        <h1 class="title"><span>{{ user.first_name }}</span>{{ user.last_name }}</h1>
+                                        <h2 class="subtitle"><span
+                                                class="text-uppercase">{{ user.about_user_short }}</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-icon"></div>
+            </div>
+        </div>
+        <section class="page-contents">
+            <!-- #####Begin main area-->
+            <section id="main-area">
+                <section class="section bg-gray section-narrow-2">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <div class="ol-heading">
+                                    <h3 class="title">ایمیل</h3>
+                                    <h4 class="sub-title">{{ user.email }}</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ol-heading">
+                                    <h3 class="title">سن</h3>
+                                    <h4 class="sub-title">{{ user.age }}</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ol-heading">
+                                    <h3 class="title">محل سکونت</h3>
+                                    <h4 class="sub-title">{{ user.address }}</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ol-heading">
+                                    <h3 class="title">تلفن</h3>
+                                    <h4 class="sub-title">0{{ user.phone_number }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-narrow-2" id="about-me">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h3 class="with-sideline">معرفی</h3>
+                                <p>{{ user.about_user_long }}</p>
+                            </div>
+{#                            <div class="col-md-3">#}
+{#                                <h3 class="with-sideline">رزومه</h3><a href="#"#}
+{#                                                                       class="btn btn-medium btn-block btn-round btn-thick-border"><i#}
+{#                                    class="oi-download-from-cloud"></i><span#}
+{#                                    class="text-capitilize">دانلود رزومه آنلاین</span></a>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </section>
+                <section class="section bg-gray section-narrow-2" id="education">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h3 class="with-sideline">تحصیلات</h3>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row">
+                                    {% for education in user.user_education_set.all %}
+                                        <div class="col-md-6">
+                                            <div class="icon-box ib-edu"><i class="oli oli-diploma"></i>
+                                                <div class="ib-wrap">
+                                                    <h3 class="title">{{ education.grade }}</h3><span
+                                                        class="subtitle">{{ education.school }}</span>
+                                                    <div class="description">
+                                                        <span>{{ education.date_start }} - {{ education.date_end }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    {% endfor %}
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- #####Begin contents-->
+                <section id="contact-me">
+                    <section class="page-contents">
+                        <!-- #####Begin main area-->
+                        <section id="main-area">
+                            <section class="section section-narrow-2 slim-container">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="ol-accordion">
+
+                                                <div class="ac-item">
+                                                    <div class="item-head">
+                                                        <i class="icon oi-plus"></i>
+                                                        <span>
+                                                        ارتباط با من
+                                                        </span></div>
+                                                    <div class="item-body">
+                                                            <h4>آدرس :</h4>
+                                                            <h5>{{ user.address }}</h5>
+                                                            <h4>تلفن :</h4>
+                                                            <h5>(تلگرام , واتساپ ) 0{{ user.phone_number }}</h5>
+                                                            <h4>ایمیل :</h4>
+                                                            <h5>{{ user.email }}</h5>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <form method="post">
+                                                {% csrf_token %}
+                                                <div class="m-bottom-20">
+                                                    {{ contact_form.full_name.label_tag }}
+                                                    {{ contact_form.full_name }}
+                                                    {{ contact_form.full_name.errors }}
+                                                </div>
+                                                <div class="m-bottom-20">
+                                                    {{ contact_form.email.label_tag }}
+                                                    {{ contact_form.email }}
+                                                    {{ contact_form.email.errors }}
+                                                </div>
+                                                <div class="m-bottom-20">
+                                                    {{ contact_form.title.label_tag }}
+                                                    {{ contact_form.title }}
+                                                    {{ contact_form.title.errors }}
+                                                </div>
+                                                <div class="m-bottom-20">
+                                                    {{ contact_form.message.label_tag }}
+                                                    {{ contact_form.message }}
+                                                    {{ contact_form.message.errors }}
+                                                </div>
+                                                <input type="submit" onclick="" value="ارسال"
+                                                       class="btn btn-medium btn-skin-dark btn-thick-border btn-block" style="border-radius: 10px ;background-color: black">
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <!-- #####End main area
+                        -->
+                        <div class="clearfix"></div>
+                    </section>
+                </section>
+                <!-- #####End contents-->
+            </section>
+            <!-- #####End main area
+            -->
+            <div class="clearfix"></div>
+        </section>
+    </section>
+    <!-- #####End contents-->
+{% endblock %}

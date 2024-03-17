@@ -1,0 +1,21 @@
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+    {% include 'AmirWeb/header_components.html' %}
+</head>
+<body>
+
+{% render_partial 'site_module.views.site_header' %}
+    {% block context %}
+
+    {% endblock %}
+{% render_partial 'site_module.views.site_footer' %}
+
+{% include 'AmirWeb/footer_components.html' %}
+</body>
+</html>

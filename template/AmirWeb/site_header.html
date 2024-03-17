@@ -1,0 +1,32 @@
+<header id="header" class=" trans header-personal-1 ">
+    <div class="head-main text-center">
+        <div class="container">
+            <div class="logo-wrapper visible-sticky">
+                <!-- standard Logo--><a href="#" class="standard-logo text-logo"><img src="{{ is_main_setting.site_logo.url }}"
+                                                                                      alt="Dr. Chaos Mctabi">
+                <div class="text-wrapper">
+                    <h1 class="title"><span>پیشدادی</span>امیرعلی</h1>
+                </div>
+            </a>
+            </div>
+            <!-- primary navigation-->
+            <ul id="primary-menu">
+                {% for header_link in header_links %}
+                    <li class="current-menu-item"><a href="{{ header_link.url }}"
+                                                     title="Home"><span>{{ header_link.title }}</span></a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- #####Begin icons beside menu-->
+            <div class="header-icons">
+                <!-- #####Begin mobile menu trigger-->
+                <div class="ol-mobile-trigger hamburger hamburger--elastic">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+                <!-- #####End mobile menu trigger-->
+            </div>
+        </div>
+    </div>
+</header>

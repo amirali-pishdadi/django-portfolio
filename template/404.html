@@ -1,0 +1,11 @@
+{% extends 'AmirWeb/layout.html' %}
+{% block title %}
+    صفحه 404
+{% endblock %}
+{% block context %}
+ <div class="text-center" style="margin-top: 100px ">
+    <h1>صفحه مورد نظر یافت نشد !</h1>
+     <h2>خطا : 404</h2>
+    <button type="button" class="btn btn-dark btn-lg" style="margin-bottom:100px "><a href="{% url 'home_page' %}" style="text-decoration: none">بازگشت به صفحه اصلی</a></button>
+ </div>
+{% endblock %}
