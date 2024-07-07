@@ -126,15 +126,7 @@ MEDIA_URL = ''
 STATIC_ROOT = BASE_DIR / 'static_cdn'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True,
-EMAIL_HOST = 'mail.webmet.ir'
-EMAIL_HOST_USER = 'amirali@webmet.ir'
-EMAIL_HOST_PASSWORD = 'Metar@1608'
-# EMAIL_PORT = 465
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'amirpishdadi4@gmail.com'
-# EMAIL_HOST_PASSWORD = 'amiir@1608'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
